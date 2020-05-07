@@ -13,7 +13,7 @@ export const Container = styled.div`
 
 export const Title = styled.h1`
   font-size: 48px;
-  color: #3a3a3a;
+  color: #222;
 `;
 
 export const CardContainer = styled.section`
@@ -68,7 +68,6 @@ export const TableContainer = styled.section`
       border: 0;
       background: #fff;
       font-size: 16px;
-      font-weight: normal;
       color: #969cb3;
 
       &.title {
