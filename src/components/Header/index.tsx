@@ -5,8 +5,6 @@ import { Link } from 'react-router-dom';
 import { Container } from './styles';
 
 import Logo from '../../assets/logo.svg';
-import Dashboard from '../../pages/Dashboard';
-import Import from '../../pages/Import';
 
 interface HeaderProps {
   size?: 'small' | 'large';
