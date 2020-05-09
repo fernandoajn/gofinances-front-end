@@ -14,7 +14,7 @@ export default createGlobalStyle`
   }
 
   body, input, button {
-    font: 16px "Nunito", sans-serif;
+    font: 16px "Mukta", sans-serif;
   }
 
   button {

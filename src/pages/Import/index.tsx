@@ -25,12 +25,17 @@ const Import: React.FC = () => {
   async function handleUpload(): Promise<void> {
     const data = new FormData();
 
-    uploadedFiles.forEach(file => {
-      data.append('file', file.file);
-    });
+    if (!uploadedFiles.length) return;
+
+    // Can handle only one uploaded file
+    const file = uploadedFiles[0];
+
+    data.append('file', file.file, file.name);
 
     try {
       await api.post('/transactions/import', data);
+
+      history.push('/');
     } catch (err) {
       console.log(err.response.error);
     }
@@ -42,7 +47,7 @@ const Import: React.FC = () => {
         const newFile: FileProps = {
           file,
           name: file.name,
-          readableSize: `${file.size}kb`,
+          readableSize: filesize(file.size),
         };
 
         return newFile;

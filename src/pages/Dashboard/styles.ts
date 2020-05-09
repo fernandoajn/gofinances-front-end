@@ -42,7 +42,7 @@ export const Card = styled.div`
   h1 {
     margin-top: 14px;
     font-size: 36px;
-    font-weight: normal;
+    font-weight: 700;
     line-height: 54px;
   }
 `;
